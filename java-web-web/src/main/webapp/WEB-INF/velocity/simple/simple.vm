@@ -1,0 +1,13 @@
+#set( $layout = "layout/layout.vm" )
+
+<p>
+	<b>!!!hello world!!!</b>
+	</br>
+</p>
+
+<div>
+</div>
+
+<div>
+	$date
+</div>
