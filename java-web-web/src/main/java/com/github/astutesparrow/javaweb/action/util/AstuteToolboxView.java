@@ -1,4 +1,4 @@
-package com.gdt.shop.util;
+package com.github.astutesparrow.javaweb.action.util;
 
 import java.lang.reflect.Method;
 import java.util.Map;

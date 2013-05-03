@@ -1,4 +1,4 @@
-package com.gdt.shop.util;
+package com.github.astutesparrow.javaweb.action.util;
 
 import org.springframework.web.servlet.view.AbstractUrlBasedView;
 import org.springframework.web.servlet.view.velocity.VelocityLayoutView;

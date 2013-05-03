@@ -1,4 +1,4 @@
-package com.gdt.shop.util;
+package com.github.astutesparrow.javaweb.action.util;
 
 import java.io.StringWriter;
 import java.util.Locale;

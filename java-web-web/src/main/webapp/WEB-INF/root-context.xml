@@ -11,6 +11,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	<!--
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName">
 			<value>java:comp/env/jdbc/gdtshop</value>
@@ -21,12 +22,8 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+	<context:component-scan base-package="com.github.astutesparrow.javaweb" />
 
-	<tx:annotation-driven transaction-manager="txManager" mode="proxy" />
-	
-	<context:component-scan base-package="com.gdt.shop.service;com.gdt.shop.manager;com.gdt.shop.domain;com.gdt.shop.dao" />
+	-->
 
 </beans>

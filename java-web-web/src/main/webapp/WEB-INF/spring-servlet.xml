@@ -8,7 +8,7 @@
 	<mvc:annotation-driven />
 
 	<!-- Scans the classpath of this application for @Components to deploy as beans -->
-	<context:component-scan base-package="com.gdt.shop.web" />
+	<context:component-scan base-package="com.github.astutesparrow.javaweb.controller" />
 
 	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
 		<property name="resourceLoaderPath" value="/WEB-INF/velocity/" />
@@ -21,7 +21,7 @@
 		</property>
 	</bean>
 
-	<bean id="velocityView" class="com.gdt.shop.util.AstuteLayoutViewResolver">
+	<bean id="velocityView" class="com.github.astutesparrow.javaweb.action.util.AstuteLayoutViewResolver">
 		<property name="order" value="20" />
 		<property name="cache" value="true" />
 		<property name="prefix" value="" />
@@ -32,38 +32,4 @@
 		<property name="dateToolAttribute" value="date" />
 	</bean>
 
-	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-		<property name="order" value="1" />
-		<property name="defaultErrorView" value="error500" />
-		<property name="defaultStatusCode" value="500" />
-		<property name="exceptionMappings">
-			<props>
-                <prop key="org.springframework.beans.TypeMismatchException">error400</prop>
-                <prop key="org.springframework.web.HttpRequestMethodNotSupportedException">error400</prop>
-                <prop key="org.springframework.web.HttpMediaTypeNotAcceptableException">error400</prop>
-                <prop key="org.springframework.web.HttpMediaTypeNotSupportedException">error400</prop>
-                <prop key="org.springframework.web.bind.MethodArgumentNotValidException">error400</prop>
-                <prop key="org.springframework.web.bind.ServletRequestBindingException">error400</prop>
-                <prop key="org.springframework.web.bind.MissingServletRequestParameterException">error400</prop>
-                <prop key="org.springframework.web.multipart.support.MissingServletRequestPartException">error400</prop>
-                <prop key="org.springframework.web.servlet.mvc.multiaction.NoSuchRequestHandlingMethodException">error400</prop>
-                <prop key="org.springframework.http.converter.HttpMessageNotReadableException">error400</prop>
-                <prop key="org.springframework.beans.ConversionNotSupportedException">error500</prop>
-                <prop key="org.springframework.http.converter.HttpMessageNotWritableException">error500</prop>
-            </props>
-		</property>
-		<property name="statusCodes">
-            <map>
-                <entry key="error400" value="400" />
-                <entry key="error404" value="404" />
-                <entry key="error500" value="500" />
-            </map>
-        </property>
-	</bean>
-
-	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="order" value="40" />
-		<property name="prefix" value="/WEB-INF/view/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
 </beans>
