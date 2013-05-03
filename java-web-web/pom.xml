@@ -109,9 +109,9 @@
 		</dependency>
 
 		<!-- Test -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
 		</dependency>
 
 	</dependencies>
